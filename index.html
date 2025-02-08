@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member Management</title>  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>User Management Dashboard</h1>
+
+    <button id="openFormBtn">Add Member</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="memberList"></tbody>  
+    </table>
+
+    
+    <div id="memberFormContainer" class="hidden">
+        <h2 id="formHeading">Add New Member</h2>
+        <form id="memberForm">
+            <input type="hidden" id="memberId">
+            <label>First Name:</label>
+            <input type="text" id="firstNameInput" required>
+            <label>Last Name:</label>
+            <input type="text" id="lastNameInput" required>
+            <label>Email:</label>
+            <input type="email" id="emailInput" required>
+            <label>Department:</label>
+            <input type="text" id="deptInput" required>
+            <button type="submit">Save</button>
+            <button type="button" id="closeFormBtn">Cancel</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
